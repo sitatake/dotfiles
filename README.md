@@ -15,13 +15,10 @@ macOS 用の個人 dotfiles。
 ## セットアップ
 
 ```sh
-# シンボリックリンクを作成
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/nvim ~/.config/nvim
-ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
-ln -sf ~/dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl
-ln -sf ~/dotfiles/mise/config.toml ~/.config/mise/config.toml
+bash ~/dotfiles/link.sh
 ```
+
+各設定ファイルのシンボリックリンクを `~/.config/` 以下に作成する。既存ファイルは `.bak` にバックアップされる。
 
 ## 主な依存ツール
 
