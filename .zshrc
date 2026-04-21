@@ -25,9 +25,9 @@ alias m='mise run'
 
 git_prompt() {
   if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = true ]; then
-    PROMPT="%F{034}%n%f:%F{020}%~%f $(git_super_status)"$'\n'"%# "
+    PROMPT="%F{034}%n%f:%F{033}%~%f $(git_super_status)"$'\n'"%# "
   else
-    PROMPT="%F{034}%n%f:%F{020}%~%f "$'\n'"%# "
+    PROMPT="%F{034}%n%f:%F{033}%~%f "$'\n'"%# "
   fi
 }
 
@@ -56,3 +56,6 @@ eval "$(zoxide init zsh --cmd cd)"
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS="--style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'"
 source <(fzf --zsh)
+
+# enable comment n command line
+setopt interactivecomments
