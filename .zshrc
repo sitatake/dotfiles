@@ -53,7 +53,6 @@ export PATH="/Users/takeshitadaichi/.antigravity/antigravity/bin:$PATH"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(zoxide init zsh --cmd cd)"
-eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS="--style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'"
 source <(fzf --zsh)
 
